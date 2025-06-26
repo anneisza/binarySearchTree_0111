@@ -77,8 +77,39 @@ class BinaryTree
         {
             // 6a : Make the left child of parent point to the new node
             parent->leftchild = newNode;
+
+            // 6b : Exit
+            return;
         }
+        // Step 7 : If the value in the data field of the new node is greater than that of the
+        else if(x > parent->info)
+        {
+            // 7a : Make the right child of the parent point to the new node
+            parent->rightchild = newNode;
+
+            // 7b : Exit
+            return;
+        } 
+    }
+
+    bool isEmpty()
+    {
+        // Checks if the tree is empty
+        return ROOT == nullptr;
+    }
+
+    void inorder(Node *ptr)
+    {
+        if (isEmpty())
+        {
+            cout<< "Tree is empty"<<endl;
+            return;
+        }
+        if (ptr == nullptr)
+            return;
         
-        
+        inorder(ptr->leftchild);
+        cout<< ptr->info << " "; //parent
+        inorder(ptr->rightchild);
     }
 };
