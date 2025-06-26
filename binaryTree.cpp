@@ -159,6 +159,17 @@ int main()
         char ch;
         cin >> ch;
         cout << endl;
+
+        switch (expression)
+        {
+        case constant expression:
+            /* code */
+            break;
+        
+        default:
+            break;
+        }
     }
+
     
 }
