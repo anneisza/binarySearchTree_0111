@@ -160,14 +160,18 @@ int main()
         cin >> ch;
         cout << endl;
 
-        switch (expression)
+        switch (ch)
         {
-        case constant expression:
-            /* code */
+        case '1':
+        {
+            x.insert();
             break;
-        
-        default:
+        }
+        case '2':
+        {
+            x.inorder(x.ROOT);
             break;
+        }
         }
     }
 
